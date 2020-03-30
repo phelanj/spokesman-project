@@ -19,9 +19,8 @@ function clickImage() {
         clearTimeout(timeout);
         slideshow(foo, buttons.length);
 }
-//removes all 'selected' classes (needs to save one)
+//removes all 'selected' classes except current
 //removes all displayed slides except selected slide
-//calls slideshow
 function updateSlide(buttonId) {
     var slideId;
     for (i = 0; i < buttons.length; i++) {
@@ -29,10 +28,8 @@ function updateSlide(buttonId) {
         buttons[i].classList.remove("selected");
         slideId = slides[i].id;
         document.getElementById(slideId).classList.remove("showSlide");
-        //document.getElementById(slideId).classList.add("hideSlide");
     }
     }
-    //document.getElementById(buttonId + "_slide").classList.remove("hideSlide");
     document.getElementById(buttonId + "_slide").classList.add("showSlide");
     document.getElementById(buttonId).classList.add("selected");
 }
@@ -41,12 +38,10 @@ function updateSlide(buttonId) {
 function slideshow(i, length) {
     for (j = 0; j < length; j++) {
     slides[j].classList.remove("showSlide");
-    //slides[j].classList.add("hideSlide");
     buttons[j].classList.remove("selected");
     }
     if (i === 12) {i = 0}
     buttons[i].classList.add("selected");
-    //slides[i].classList.remove("hideSlide");
     slides[i].classList.add("showSlide");
     timeout =  setTimeout(slideshow, cycle, ++i, length);  
 }
