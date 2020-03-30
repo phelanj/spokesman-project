@@ -1,0 +1,96 @@
+/* ----------------------------
+/*  Name: spokesman-project
+    Author: Jack Phelan
+    Version: 0
+/* -------------------------- */
+body {
+    margin: 0;
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+.topSection > span {
+    font-size: 2em;
+}
+
+
+.stripe {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    margin-top: 2.5rem;
+    z-index: -1;
+    right: 25%;
+    background-color: #B31934;
+}
+.imgCopy {
+    text-align: right;
+    min-height: 13.125rem;
+}
+
+.imgCopy h4 {
+    padding: 0 .5rem;
+}
+
+.imgCopy p {
+    padding: 0 .5rem;
+}
+
+.selected {
+    border: 5px solid #B31934;
+}
+
+.imgIcon:hover {
+    cursor: pointer;
+    border: 2px solid #B31934;
+}
+.selected:hover {
+    border: 5px solid #B31934;
+}
+.slide {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s linear;
+}
+
+.showSlide {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s linear;
+}
+
+
+button {
+    cursor: pointer;
+    width: 99%;
+    padding: .5rem 0;
+    color: white;
+    font-weight: bold;
+    background-color: #B31934;
+    border-radius: 3px;
+}
+
+
+.support-copy span{
+font-size: .7rem;
+}
+/* custom css in order to get 12 / 6 columns  */
+@media (min-width: 30em) {
+    .w-8-l {
+        width: 16.666666%;
+    }
+}
+
+@media (min-width: 50em) {
+.w-8-l {
+    width: 8.3333333%;
+}
+}
+
+@media (max-width: 59.9375em) {
+.stripe {
+    right: 0;
+}
+}
